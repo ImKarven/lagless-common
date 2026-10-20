@@ -1,7 +1,5 @@
 package me.karven.lagless.config.module;
 
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EntityTypes;
 import org.jspecify.annotations.NullMarked;
 import org.spongepowered.configurate.objectmapping.ConfigSerializable;
 
@@ -20,7 +18,7 @@ public class AttackModuleConfiguration {
     public static class EntityTypesConfiguration {
 
         public Mode mode = Mode.BLACKLIST;
-        public List<EntityType<?>> entityTypes = List.of(EntityTypes.PLAYER);
+        public List<String> entityTypes = List.of("minecraft:player");
 
         public enum Mode {
             WHITELIST,
